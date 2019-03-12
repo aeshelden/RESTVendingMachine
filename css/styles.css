@@ -1,0 +1,33 @@
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#vendingTransactionForm {
+    width: 200px;
+    margin: 5px auto;
+}
+#vendingMessagesForm { 
+    width: 200px;
+    margin: 5px auto;
+}
+#vendingChangeForm {
+    width: 200px;
+    margin: 5px auto;
+}
+
+#vendingTransactionText {
+    text-align: center;
+}
+
+
+#vendingFormsDiv {
+    float: right;
+}
+
+#vendingItemCard {
+    float: left;  
+}
