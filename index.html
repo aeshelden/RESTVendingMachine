@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="css/styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <h2>Vending Machine</h2>
-        <hr />
-        <ul class="list-group" id="errorMessages"></ul>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        
-            <div id="vendingCard">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Vending Machine</h2>
+    <hr />
+    <ul class="list-group" id="errorMessages"></ul>
+
+    <div class="container">
+        <div class="row">
+            <div id="vendingCard" class="col-9 row">
+
+
                 
-                  
-                <div class="col-md-4">
-                    <div class="card btn" id="vendingMessagesItemButton" onclick="addItemToItemBox()">
-                        <!--content for one item goes here?-->
-                    </div>
-                </div>
-
             </div>
 
-        
-        <!-- <div id="itemDiv">
+
+
+            <!-- <div id="itemDiv">
             <table id="vendingTable" class="paddingBetweenCols col-md-9">
                 <tbody id="vendingTableBody"></tbody>
             </table>
         </div> -->
 
-        <div class="col-md-3" id="vendingFormsDiv">
+            <div class="col-md-3" id="vendingFormsDiv">
                 <div id="vendingTransactionForm"></div>
-                    <p id="vendingTransactionText">Total $ In</p>
-                    <input value="0" id="vendingTransactionMoney" class="form-control" type="number" step=".01" disabled>
-                    <br />
-                    <button id="addDollarButton" type="button" class="btn btn-default border-secondary">Add Dollar</button>
-                    <button id="addQuarterButton" type="button" class="btn btn-default border-secondary">Add Quarter</button>
-                    <button id="addDimeButton" type="button" class="btn btn-default border-secondary">Add Dime</button>
-                    <button id="addNickelButton" type="button" class="btn btn-default border-secondary">Add Nickel</button>
-                    <hr />
+                <p id="vendingTransactionText">Total $ In</p>
+                <input value="0" id="vendingTransactionMoney" class="form-control" type="number" step=".01" disabled>
+                <br />
+                <button id="addDollarButton" type="button" class="btn btn-default border-secondary">Add Dollar</button>
+                <button id="addQuarterButton" type="button" class="btn btn-default border-secondary">Add Quarter</button>
+                <button id="addDimeButton" type="button" class="btn btn-default border-secondary">Add Dime</button>
+                <button id="addNickelButton" type="button" class="btn btn-default border-secondary">Add Nickel</button>
+                <hr />
                 <div id="vendingMessagesForm"></div>
-                    <p id="vendingMessagesText">Messages:</p>
-                    <input id="vendingMessages" class="form-control" type="text" readonly>
-                    <p id="vendingMessagesItemText">Item:</p>
-                    <input id="vendingMessagesItem" class="form-control" type="text" disabled>
-                    <br />
-                    <button id="makePurchaseButton" type="button" class="btn btn-default border-secondary" onclick="makePurchase()">Make Purchase</button>
-                    <hr />
+                <p id="vendingMessagesText">Messages:</p>
+                <input id="vendingMessages" class="form-control" type="text" readonly>
+                <p id="vendingMessagesItemText">Item:</p>
+                <input id="vendingMessagesItem" class="form-control" type="text" disabled>
+                <br />
+                <button id="makePurchaseButton" type="button" class="btn btn-default border-secondary" onclick="makePurchase()">Make
+                    Purchase</button>
+                <hr />
                 <div id="vendingChangeForm"></div>
-                    <p id="vendingChangeText">Change</p>
-                    <input id="vendingChange" class="form-control" type="text" readonly>
-                    <br />
-                    <button id="changeReturnButton" type="button" class="btn btn-default border-secondary" onclick="changeReturn()">Change Return</button>
+                <p id="vendingChangeText">Change</p>
+                <input id="vendingChange" class="form-control" type="text" readonly>
+                <br />
+                <button id="changeReturnButton" type="button" class="btn btn-default border-secondary" onclick="changeReturn()">Change
+                    Return</button>
+            </div>
         </div>
-        
+    </div>
 
 
-        
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
 
 </html>
