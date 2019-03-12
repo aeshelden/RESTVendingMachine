@@ -9,20 +9,6 @@ $(document).ready(function () {
 
 });
 
-
-
-
-{/* <div class="col-sm-6" style="border: solid black 2px">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn btn-primary">Primary</button> */}
-
 function loadVendingMachine() {
     // clearVendingMachine();
 
@@ -38,11 +24,11 @@ function loadVendingMachine() {
                 var price = item.price;
                 var quantity = item.quantity;
 
-                var card = '<div class="col-md-9">'
-                    card += '<div class="card-deck" id="vendingItemCard">';
+                var card = '<div class="col-4">'
+                    card += '<div id="vendingItemCard">';
                     card += '<div class="card bg-light mb-3 mt-3 ml-4 mr-4">';
                     card += '<div class="card">';
-                    card += '<div class="card-body  text-center">';
+                    card += '<div class="card-body text-center">';
                     card += '<button type="button" class="btn btn-primary card-btn" id="vendingMessagesItemButton" onclick="addItemToItemBox(' + id + ')">' + id + '</button>'; 
                     card += '<p class="card-text">' + name + '</p';
                     card += '<p class="card-text"> $' + price + '</p>';
@@ -134,6 +120,3 @@ function changeReturn() {
     $('#vendingMessages').val('');
     $('#vendingMessagesItem').val('');
 }
-
-
-
