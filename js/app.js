@@ -2,15 +2,13 @@ $(document).ready(function () {
 
     loadVendingMachine();
 
-    addMoney();
-    
-    makePurchase();
-
-
+    registerMoneyButtons();
 });
 
+
 function loadVendingMachine() {
-    // clearVendingMachine();
+    
+    clearVendingMachine();
 
     var vendingCard = $('#vendingCard');
 
@@ -45,7 +43,7 @@ function loadVendingMachine() {
     });
 }
 
-function addMoney() {
+function registerMoneyButtons() {
     var currentFunds = document.getElementById("vendingTransactionMoney");
     var dollar = document.getElementById("addDollarButton");
     var quarter = document.getElementById("addQuarterButton");
@@ -81,6 +79,12 @@ function makePurchase() {
 
         var getItemToPurchase = $('#vendingMessagesItem').val();
 
+        if (currentFunds === "" || getItemToPurchase === "") {
+            alert('Please make sure you have chosen an item to purchase' +
+            ' and that you have entered money to buy it.');
+            return false;
+        }
+
         $.ajax({
         type: 'GET',
         url: 'https://tsg-vending.herokuapp.com/money/' + currentFunds + '/item/' + getItemToPurchase,
@@ -95,6 +99,7 @@ function makePurchase() {
             var pennies = data.pennies;
             $('#vendingChange').val(quarters + ' quarters ' + dimes + ' dimes ' + nickels + ' nickels ' + pennies + ' pennies ');
             $('#vendingMessages').val('Thank you!');
+            $('#vendingTransactionMoney').val('');
             loadVendingMachine();
         },
         error: function(xhr, status, error) {
@@ -119,4 +124,8 @@ function changeReturn() {
     }
     $('#vendingMessages').val('');
     $('#vendingMessagesItem').val('');
+}
+
+function clearVendingMachine() {
+    $('#vendingCard').empty();
 }
